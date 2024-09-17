@@ -1,4 +1,5 @@
 let = listaDeNumerosSorteados = [];
+let numeroLimete = 100
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1
 function exibirTextoNaTela(tag, texto) {
@@ -31,7 +32,7 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio(){
-    let nuemroEscolhido = parseInt(Math.random()* 10 + 1);
+    let nuemroEscolhido = parseInt(Math.random()* numeroLimete + 1);
     if (listaDeNumerosSorteados.includes(nuemroEscolhido)){
         return gerarNumeroAleatorio();
     } else {
